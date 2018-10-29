@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <h1>Listado de Mascotas</h1>
+    <div class="articles">
+        {% for article in articles %}
+        <div class="article">
+            <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a></h2>
+            <p> Descripcion: {{ article.snippet }}</p>
+            <p> Fecha de Publicacion: {{ article.date }}</p>
+            <p class="author"> agregado por: {{ article.author.username }} </p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

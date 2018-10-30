@@ -1,4 +1,4 @@
-const titleInput = document.querySelector('input[name=title]');
+const nombreInput = document.querySelector('input[name=nombre]');
 const slugInput = document.querySelector('input[name=slug]');
 
 const slugify = (val) => {
@@ -9,6 +9,6 @@ const slugify = (val) => {
 
 };
 
-titleInput.addEventListener('keyup', (e) => {
-    slugInput.setAttribute('value', slugify(titleInput.value));
+nombreInput.addEventListener('keyup', (e) => {
+    slugInput.setAttribute('value', slugify(nombreInput.value));
 });

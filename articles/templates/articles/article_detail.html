@@ -5,8 +5,8 @@
     <div class="article">
         <a href="{% url 'articles:edit' slug=article.slug %}">EDITAR</a>
         <img src="{{ article.thumb.url }}"/>
-        <h2>{{ article.title }}</h2>
-        <p>{{ article.body}}</p>
+        <h2>{{ article.nombre }}</h2>
+        <p>{{ article.descripcion}}</p>
         <p>{{ article.date }}</p>
         <p>{{ article.estado }}</p>
     </div>

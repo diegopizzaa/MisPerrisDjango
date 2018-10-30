@@ -15,9 +15,9 @@ class Migration(migrations.Migration):
             name='Article',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
+                ('nombre', models.CharField(max_length=100)),
                 ('slug', models.SlugField()),
-                ('body', models.TextField()),
+                ('descripcion', models.TextField()),
                 ('date', models.DateTimeField(auto_now_add=True)),
             ],
         ),

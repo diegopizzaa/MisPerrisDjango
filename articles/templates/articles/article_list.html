@@ -7,6 +7,7 @@
         <div class="article">
             <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{ article.nombre }}</a></h2>
             <p> Descripcion: {{ article.snippet }}</p>
+            <p> Raza Predominandte: {{ article.raza }}</p>
             <p> Fecha de Publicacion: {{ article.date }}</p>
             <p class="author"> agregado por: {{ article.author.username }} </p>
             <p> Estado: {{ article.estado }} </p>

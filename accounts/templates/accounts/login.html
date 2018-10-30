@@ -1,11 +1,11 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-    <h1>Log in</h1>
+    <h1>Iniciar Sesion</h1>
     <form class="site-form" action="{% url 'accounts:login' %}" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Login" />
     </form>
-    <p>Not got an account? <a href="{% url 'accounts:signup' %}">Sign Up</a></p>
+    <p>No se ha registrado? <a href="{% url 'accounts:signup' %}">Registrar</a></p>
 {% endblock %}

@@ -6,6 +6,7 @@
         <a href="{% url 'articles:edit' slug=article.slug %}">EDITAR</a>
         <img src="{{ article.thumb.url }}"/>
         <h2>{{ article.nombre }}</h2>
+        <p> Raza Predominandte: {{ article.raza }}</p>
         <p>{{ article.descripcion}}</p>
         <p>{{ article.date }}</p>
         <p>{{ article.estado }}</p>

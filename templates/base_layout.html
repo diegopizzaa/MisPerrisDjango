@@ -17,13 +17,13 @@
                     <li>
                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
-                            <button type="submit">Logout</button>
+                            <button type="submit">Cerrar Sesion</button>
                         </form>
                     </li>
-                    <li><a href="{% url 'articles:create' %}" class="highlight">New Article</a></li>
+                    <li><a href="{% url 'articles:create' %}" class="highlight">Nueva Mascota</a></li>
                     {% else %}
-                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
-                    <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+                    <li><a href="{% url 'accounts:login' %}">Iniciar Sesion</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">Registrarse</a></li>
                     {% endif %}
                 </ul>
             </nav>

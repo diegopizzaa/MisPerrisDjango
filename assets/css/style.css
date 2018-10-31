@@ -1,0 +1,284 @@
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    background: #78D4BB;
+}
+
+/*Misperris vol4*/
+header {
+    background: #78D4BB;
+    padding: 15px 0;
+}
+
+
+.header{
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+header .menu ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+/*---------- SECTION - Informacion y Redes Sociales ---------------*/
+
+.banner-info{
+    color: #fff;
+    background: #78D4BB;
+    padding: 0 20px;
+}
+
+.banner-info .info{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.banner-info .redes-sociales{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+    
+.banner-info .info .redes-sociales a{
+    margin-left: 15px;        
+}
+    
+.banner-info .info .redes-sociales .social {
+    color: #78D4BB;
+    background: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/*---------- SECTION - RESCATE Y CROWFUNDING  ---------------*/
+.contenedor .opcion {
+    background-color: #fff;
+}
+
+
+hr {
+    display: inline-block;
+    width: 10%;
+    border-color: #9b9b9b;
+    border-width: 2px;
+    border-style: solid;
+    margin: 20px 0;
+}
+
+.banner-opcion p {
+    font-size: 0.8125rem;
+    line-height: 1.6rem;
+}
+
+.banner-opcion img{
+    width: 80%;
+    padding: 20px;
+}
+
+.banner-opcion .opcion {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.banner-opcion .opcion .rescate {
+    width: 48%;
+    text-align: right;
+}
+
+.banner-opcion .opcion .crowfunding{
+    width: 48%;
+}
+
+.rescate h3, .crowfunding h3{
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: #b1b1b1;
+}
+
+.btn-crow{
+    margin: 20px 0px;
+    padding: 10px 20px;
+    border: solid 3px #000;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.footer{
+    background: #f2f2f2;
+    padding: 2rem 0;
+    /*margin-top: 6rem;*/
+    text-align: left;
+}
+
+/*
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration:none;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper > h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+}
+
+nav{
+    justify-self: end;
+}
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+}
+*/
+nav button{
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 16px;
+}
+
+.articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.article{
+    padding: 10px;
+    border: 1px solid #418674;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.article h2{
+    font-size: 1.2em;
+}
+
+.article .author{
+    padding: 10px;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #000;
+    font-family: monospace;
+}
+
+.article-detail .article{
+    padding: 0;
+}
+
+.article-detail  .article img{
+    max-width: 100%;
+}
+
+.article-detail  .article h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+}
+
+.article-detail .article h3{
+    text-align: center;
+}
+
+.article-detail  .article p{
+    margin: 10px 20px;
+}
+
+.site-form{
+    margin-top: 60px;
+    border: 1px solid #418674;
+    padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+
+a.highlight{
+    border: 1px solid #418674;
+    padding: 10px;
+    border-radius: 4px;
+    color: #418674;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 28px;
+    color: rgb(250, 250, 250);
+    font-size: 0.9em;
+    display: block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #ff5722;
+    color: #ff5722;
+    margin: 10px 0;
+}
+
+.errorlist{
+    padding: 0;
+}
+
+.site-form input[type='submit']{
+    background: #418674;
+    border:0;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+
+
+
+/*COSAS ANTIGUAS
+
+
+
+
+
+
+*/

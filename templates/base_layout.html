@@ -5,14 +5,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Articles</title>
-    <link rel="stylesheet" href="{% static 'style.css '%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{static/fonts.css">
+    <link rel="stylesheet" href="{% static 'css/mi-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}">
+
+    <script src="static/js/jquery-3.1.1.min.js"></script>
+    <script src="static/js/jquery.nivo.slider.js"></script>
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#slider').nivoSlider();
+        }); 
+    </script>
+
 </head>
 
 <body>
-        <header class="wrapper">
-            <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="misperris" /></a></h1>
-            <nav>
+    <header class="wrapper">
+        <h1><a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="misperris" /></a></h1>
+        <div class="contenedor header">
+            <nav class="menu">
                 <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Quienes somos</a></li>
+                    <li><a href="#">Servicios</a></li>
                     {% if user.is_authenticated %}
                     <li>
                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
@@ -27,12 +46,78 @@
                     {% endif %}
                 </ul>
             </nav>
-        </header>
-        <div class="wrapper">
-            {% block content %}
-            {% endblock %}
         </div>
-    </body>
+    </header>
 
+    <div class="slider-wrapper theme-mi-slider">
+        <div id="slider" class="nivoSlider">
+            <img src="static/img/adoptados/Apolo.jpg" alt="" title="#htmlcaption1" />
+            <img src="static/img/adoptados/Duque.jpg" alt="" title="#htmlcaption2" />
+            <img src="static/img/adoptados/Tom.jpg" alt="" title="#htmlcaption3" />
+        </div>
+        <div id="htmlcaption1" class="nivo-html-caption">
+            <p>"Adoptamos a Apolo <br> hace poco y ya es <br> parte de la familia"</p>
+        </div>
+        <div id="htmlcaption2" class="nivo-html-caption">
+            <p>"Hace tiempo que queriamos <br> adoptar un perrito y <br> Duque resultó ser el <br> mejor amigo del
+                mundo"</p>
+        </div>
+        <div id="htmlcaption3" class="nivo-html-caption">
+            <p>"Estamos felices <br> de tener a Tom <br> en casa. Es un super <br> fiel compañero"</p>
+        </div>
+    </div>
+
+    <section class="banner-info">
+        <div class="contenedor info">
+            <p>+ 56 9 98765431</p>
+            <p class="txt">Rescate y Adopcion de Perros Callejeros</p>
+
+            <div class="redes-sociales">
+                <a class="social" href="#"><i class="icon-facebook"></i></a>
+                <a class="social" href="#"><i class="icon-google-plus"></i></a>
+                <a class="social" href="#"><i class="icon-instagram"></i></a>
+                <a class="social" href="#"><i class="icon-mail3"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-opcion">
+        <div class="contenedor opcion">
+
+            <div class="rescate">
+                <h2>RESCATE</h2>
+                <h3>ETAPA UNO</h3>
+                <hr class="linea">
+                <p>Rescatamos perros en situacion de peligro y/o abandono. Los rehabilitamos y preparamos para
+                    buscarles un hogar.</p>
+                <img src="static/rescate.jpg" alt="perrito">
+            </div>
+
+            <div class="crowfunding">
+                <img src="static/crowfunding.jpg" alt="comida">
+                <h2>CROWFUNDING</h2>
+                <h3>FINANCIAMIENTO</h3>
+                <hr class="linea">
+                <p>Sigues nuestras redes sociales para informarte acerca de las diversas campañas y actividades que
+                    realizamos para obtener financiamiento para seguir ayudando.</p>
+                <button type="button" class="btn-crow">Campañas</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>Desarrollo Web y Mobile</p>
+        </div>
+    </footer>
+
+
+</body>
 
 </html>
